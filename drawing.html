@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>US History</title>
+        <link rel="icon" type="image/png" href="Downloads/USH_Map-removebg-preview.png"/>
+    </head>
+    <body>
+        <span style="font-size: 200%; position: absolute; left: 38%;"><strong>European Exloration to the US</strong></span>
+        <div id="grid" style="position: absolute; width: 90%; height: 80%; top: 10%; left: 5%; border: black 1px solid; overflow: hidden;">
+            <div id="ocean" style="width: 100%; height: 100%; background-color: rgb(0, 174, 255); display: none;"></div>
+            <div id="mapGrid" style="position: absolute; width: 500%; height: 500%; left: 0%; top: 0%;"></div>
+            <canvas id="mapCanvas" style="position: absolute;"></canvas>
+        </div>
+        <canvas id="playerCanvas" style="position: absolute;"></canvas>
+        <img id="photo" style="position: absolute; display: none;" src="https://www.astaichung.com/uploads/1/3/6/3/13638525/editor/mr-ethan-dombkowski2.jpg?1598862181">
+        <div id="grid2" style="position: absolute; width: 90%; height: 80%; top: 10%; left: 5%; border: black 1px solid; font-size: 125%; overflow: hidden;">
+            <div id="checkBox" style="position: absolute; top: 0%; right: 0%; background-color: rgba(231, 231, 231, 0.8); width: 15%; height: 18.5%; transition: top 1s;">
+                <span style="position: absolute; left: 12%;"><strong>European Colonization</strong></span><br>
+                <span style="opacity: 0;">ss</span><input type="checkbox" id="s" value="Spanish"><span style="color: blueviolet;">Spanish</span>
+                <input type="checkbox" id="e" value="English"><span style="color: green;">British</span><br>
+                <span style="opacity: 0;">ss</span><input type="checkbox" id="f" value="French"><span style="color: orange;">French<span style="opacity: 0;">s</span></span>
+                <input type="checkbox" id="d" value="Dutch"><span style="color: red;">Dutch</span><br>
+                <span style="opacity: 0;">ss</span><input type="checkbox" id="p" value="Portugal"><span style="color: rgb(20, 163, 182);">Portugal</span>
+                <input type="checkbox" id="c" value="13Colonies"><span style="color: blue;">13 Colonies</span><br>
+                <span style="opacity: 0;">ss</span><input type="checkbox" id="showReason">Exploration Reasons
+            </div>
+        </div>
+        <div id="reasonPage" style="position: absolute; width: 50%; height: 50%; background-color: rgba(0, 0, 0, 0.8); left: 25%; bottom: 100%; border: 3px black solid; overflow: hidden;">
+            <div id="slideSpanish" style="position: absolute; width: 100%; height: 100%; background-color: blueviolet; text-align: center; transition: left 1s; color: white; font-size: 125%;">
+                <br><strong>Spanish</strong><br><br>
+                After Portugal's success at traveling across the Sahara desert(see the Portugal slide for more info),<br>
+                the Spanish thought that they could do the same. This led to them also develop better sailing and<br>
+                navigating techniques that enabled them to have the ability to compete with the Portuguese at trading.<br>
+                However, unlike the Portuguese, the Spanish thought that since Earth is round, they could travel<br>
+                through the Atlantic Ocean to reach Asia. Christopher Columbus, the most famous Spanish explorer,<br>
+                did exactly that by traveling across the Atlantic Ocean, but he stumbled upon the Americas since<br>
+                he did not know there's another land in between Europe and Asia. Surprisingly, Columbus found lots<br>
+                of gold, treasure, and other valuable supplies there, which led to more Spanish expeditions to the<br>
+                Americas. With the Treaty of Tordesillas(see the Portugal slide for more info), even more Spainish<br>
+                were driven to migrate to the Americas for permanent settlements. The settlements also allowed<br>
+                Europeans to have access to more lands, which defined their status, so many Spanish are trying<br>
+                to get to the Americas as a way to improve their status.
+            </div>
+            <div id="slideEnglish" style="position: absolute; width: 100%; height: 100%; background-color: green; text-align: center; transition: left 1s; color: white; font-size: 125%;">
+                <br><strong>British (Before 13 Colonies)</strong><br><br>
+                The British colonies were split into two parts at first when they came to the Americas.<br>
+                One of them is at the Northeast part of the United States, consisting of modern day Maine,<br>
+                New Hamphire, Vermont, Massachusetts, Rhode Island, and Connecticut. Another colonization is<br>
+                at the Southeast part of the Untied States, consisting of modern day Georgia, South Carolina,<br>
+                North Carolina, Virginia, and Maryland. The British first came to the Americas with the thought<br>
+                to increase all individual's wealth, power, and status with the gold, silver, and other<br>
+                treasures that they thought would be free of taking. They also thought that the Native<br>
+                Americans would see themselves as higher, better beings, which would make them work for the<br>
+                British willingly. This led to many people, without any agricultural experiences at all, traveling<br>
+                across the Atlantic Ocean to get to the Americas, where they established the first ever colonization<br>
+                in Jamestown, Virginia. After their settlement in Jamestown, the British colonists started cultivating<br>
+                tobacco. The massive tobacco cultivation and its economic success drove even more British to come to<br>
+                the Americas with the hopes of becoming wealthier.  
+            </div>
+            <div id="slideFrench" style="position: absolute; width: 100%; height: 100%; background-color: orange; text-align: center; transition: left 1s; font-size: 125%;">
+                <br><strong>French</strong><br><br>
+                Like all other European countries, France is trying to find a shorter, better route to Asia to access<br>
+                the Silk Road trades. They traveled across the Americas in hopes of finding the Northwest passage,<br>
+                a route that directly connects Asia and the Americas through a small path in Northern Canada. As a<br>
+                result, the French settled in the northern regions of the United States, including the states west<br>
+                of the Mississippi river and above the Spanish colonization territory, and parts of Canada. Moreover,<br>
+                the French later found out that the Northern regions of the United States and Canada are inhabited by<br>
+                a large population of beavers, whose fur are extremely valuable and useful. This led them to establish<br>
+                trading posts for the animal fur trades, which is a huge economic success for them. Eventually, the<br>
+                growing fur trade led many more French colonists to come to the Americas. It also made the French<br>
+                colonies spread across the Americas even more in order to hunt down more beavers(once the hunting region<br>
+                is low in the number of beavers, the French have to explore more lands in search of more beavers).<br>
+                However, the fur trade led to a massive reduction in beaver population, impacted the Native Americans<br>
+                with food depletions, and destroyed various natural environments and habitats.
+            </div>
+            <div id="slideDutch" style="position: absolute; width: 100%; height: 100%; background-color: red; text-align: center; transition: left 1s; color: white; font-size: 125%;">
+                <br><br><strong>Dutch</strong><br><br>
+                The Dutch came to the Americas mostly to increase the volume of their trades, so they only<br>
+                colonized New Jersey, Long Island(New York), and Delaware, which were all coastal lands that<br>
+                are better and more efficient at trading with other countries. Another reason for them to stay<br>
+                at the coastal regions of the Americas is that in 1492, the Spanish began to determine if people<br>
+                are Catholic enough or not, which was known as the Spanish Inquisition. If not, then those people<br>
+                will be forced out of the country. Since most non-Catholics were Jews who were already rich<br>
+                merchants, they have the wealth to leave and join the Ottoman Empire, who welcomed them<br>
+                full-heartedly in order to gain access to the Silk Road trades. Since there are already many Jews<br>
+                in the Dutch colonies, they could just make trades with the Jews in the Ottoman Empire,<br>
+                eliminating the need to explore the west of the Americas.
+            </div>
+            <div id="slidePortugal" style="position: absolute; width: 100%; height: 100%; background-color: rgb(20, 163, 182); text-align: center; transition: left 1s; font-size: 125%;">
+                <strong>Portugal</strong><br><br>
+                Due to the fall of Constantinople, the Ottoman Empire now controls most of the trades in the<br>
+                Silk Road. Since most of the goods with better qualities were traded first in the beginning of<br>
+                the Silk Road, the European countries at the end of the Silk Road can only receive the ones left<br>
+                with poorer qualities. This means that they had to pay more money for a lower quality. Ultimately,<br>
+                this drove Portugal away to find another route to reach Asia to gain more access to the Silk Road.<br>
+                The lack of trade motivated Portugal to develop sailing techniques that allowed them to sail across<br>
+                the Sahara desert and straight to Asia, making them the most powerful European country during that<br>
+                time. However, the Treaty of Tordesillas was established to ensure that both Spain(see Spanish slide<br>
+                for more info) and Portugal have a monopoly in their trade routes but at the same time reduce some<br>
+                of the tension and competition between the two strong nations. With the Line of Demarcation established<br>
+                in Treaty of Tordesillas, the world was split in half with an imaginary line separating the Americas<br>
+                with Asia, Africa, Europe, and a small portion of Brazil. This allowed the Spanish to gain access to<br>
+                all the Americas, while the Potuguese can have access to Brazil. This led to Portugal colonizing Brazil<br>
+                to explore more land and trade. This also made Brazil a Portuguese-speaking country, unlike the other<br>
+                South American Spanish-speaking countries that it is surrounded by. Moreover, it also started the <br>
+                Age of Exploration and caused the fall of the Mali Empire.
+            </div>
+            <div id="slideColonies" style="position: absolute; width: 100%; height: 100%; background-color: blue; text-align: center; transition: left 1s; color: white; font-size: 125%;">
+                <br><br><strong>13 Colonies</strong><br><br>
+                The original 13 colonies were the result of the mergence of the two British colonies. After<br>
+                the British acquired the two lands of the Americas as their colonies, they found out that the<br>
+                two colonies lacked communication and cooperation. Meanwhile, the other colonies, especially<br>
+                Spain and France, are growing larger and stronger every day. This urged the British to unify<br>
+                their two colonies by squeezing out the Dutch colony that's in between their two colonies to<br>
+                form a better, stronger British colony. As a resullt, the orginal 13 colonies were formed.<br>
+                The original 13 colonies included Georgia, South Carolina, North Carolina, Virginia, Maryland,<br>
+                Delaware, Pennsylvania, New York, Connecticut, New Jersey, New Hampshire, and Massachusetts<br>
+                (which includes Maine back then). All these colonies later became the first few states in the<br>
+                United States, which is why many Eastern states have British names in them.
+            </div>
+            <div id="slideRight" style="width: 0; height: 0; position: absolute;right: 1%;top: 30%;border-top: 60px solid transparent;border-bottom: 60px solid transparent;border-left: 60px solid rgba(0, 0, 0, 0.2); transition: border-left 0.7s;"></div>
+            <div id="slideLeft" style="width: 0; height: 0; position: absolute;left: 1%;top: 30%;border-top: 60px solid transparent;border-bottom: 60px solid transparent;border-right: 60px solid rgba(0, 0, 0, 0.2);transition: border-right 0.7s;"></div>
+        </div>
+        <div id="tooltip" style="position: absolute; width: 65px; height: auto; background-color: rgba(0, 0, 0, 0.8); color: white; text-align: center; border-radius: 10%; border: wheat 2px solid; display: none;">
+            <span id="states">Hi</span><br>
+            <span id="moreInfo" style="font-size: 50%;">None</span><br>
+        </div>
+        <div id="beforeAfter" style="position: absolute; width: 60%; height: 75%; background-color: black; left: 20%; bottom: 100%; text-align: center; font-size: 125%; color: white; transition: bottom 1s; border: wheat 3px solid; overflow: scroll; ">
+            <button style="position: absolute; top: 0%; left: 0%; width: 80px; height: 22.5px; background-color: rgb(241, 183, 94);" onclick="closeBeforeAfter();"><strong>Close</strong></button>
+            <strong><span id="stateName">Jamestown</span></strong><br><br><!--bottom=12.5% later-->
+            <span id="stateInfo"></span><br><br>
+            <img id="infoImg">
+            <br><br>
+            Timline: <span id="colonizedTime"></span><br>
+            <input type="range" min="1" max="2" value="1" id="timeline" style="width: 70%;">
+        </div>
+        <button style="position: absolute; right: 4.9%; bottom: 9.85%; width: 120px; height: 30px; background-color: rgb(241, 183, 94);" onclick="locateMap();"><strong>Locate Map</strong></button>
+        <div id="infoPage" style="position: absolute; bottom: 100%; left: 0%; width: 100%; height: 100%; background-color: beige; opacity: 0.85; text-align: center; font-size: 175%;">
+            <br><span style="font-size: 150%;"><strong>Game Information</strong></span><br><br>
+            <strong>Createad By</strong><br>Alan Lin<br><br>
+            <strong>Game Description</strong><br>
+            A game where you can learn the European colonization(Spanish, British, French, and Dutch) of the Americas.<br>
+            Move the character around the states by pressing up, down, left, or right arrow.<br>
+            You can also click the checkboxes on the top right corner to show each European colonies.<br>
+            Click on "M" to access information about the conditions of the Americas before and after European colonization.<br><br>
+            <strong>Settings</strong><br>
+            U.S. States Labels: <button style="width: 100px; height: 22.5px; background-color: rgb(241, 183, 94);" onclick="showLabels();"><strong>Labels</strong></button>
+            Show Ocean: <button style="width: 100px; height: 22.5px; background-color: rgb(241, 183, 94);" onclick="showOcean();"><strong>Ocean</strong></button><br><br>
+            Map Size: <span id="sizeValue"></span><br>
+            <input type="range" min="10" max="50" value="30" id="mapSize" style="width: 35%;"><br><br>
+            Character speed: <span id="speedValue"></span><br>
+            <input type="range" min="1" max="10" value="5" id="speed" style="width: 35%;"><br><br>
+            Character Color:<br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="blockColor1">
+            <input type="range" min="0" max="255" value="0" class="slider" id="blockColor2">
+            <input type="range" min="0" max="255" value="0" class="slider" id="blockColor3"><br><br>
+            Character Size: <span id="playerSize"></span><br>
+            <input type="range" min="1" max="5" value="1" id="size" style="width: 35%;">
+        </div>
+        <style>
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+            ::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0,0);
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #555;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: white;
+            }
+            ::-webkit-scrollbar-corner{
+                display: none;
+            }
+            .slider{
+                width: 25%;
+                -webkit-appearance: none;
+                appearance: none;
+                height: 15px;
+                background-color: rgb(151, 151, 151);
+                outline: none;
+                opacity: 0.5;
+                transition: opacity 1s;
+            }
+            #blockColor1::-webkit-slider-thumb{
+                -webkit-appearance: none;
+                appearance: none;
+                width: 25px; 
+                height: 25px; 
+                background: red; 
+                cursor: pointer; 
+            }
+            #blockColor2::-webkit-slider-thumb{
+                -webkit-appearance: none;
+                appearance: none;
+                width: 25px; 
+                height: 25px; 
+                background: green; 
+                cursor: pointer; 
+            }
+            #blockColor3::-webkit-slider-thumb{
+                -webkit-appearance: none;
+                appearance: none;
+                width: 25px; 
+                height: 25px; 
+                background: blue; 
+                cursor: pointer; 
+            }
+            .slider:hover{
+                opacity: 1;
+            }
+        </style>
+    </body>
+    <script src="whiteboard.js"></script>
+</html>
