@@ -82,7 +82,7 @@ function drawMap(){
                 }
             }
             ds.fillRect(blockX,blockY,blockSize,blockSize);
-            ds.lineWidth=2;
+            ds.lineWidth=1.8;
             if(USMap[i][j].includes("l")){
                 ds.beginPath();
                 ds.moveTo(blockX+blockSize,blockY);
@@ -194,7 +194,7 @@ var stateName="";
 var pic=false;
 function showPerson(){
     let photo=document.getElementById("photo");
-    photo.src="Downloads/unnamed-removebg-preview (1).png";
+    photo.src="unnamed-removebg-preview (1).png";
     if(photo.style.display=="block"){
         photo.style.display="none";
         pic=false;
@@ -412,8 +412,8 @@ setInterval(function(){
     document.getElementById("speedValue").innerHTML=document.getElementById("speed").value;
     let tooltip=document.getElementById("tooltip");
     //Make tool tip on top of player
-    tooltip.style.top=(grid.offsetHeight/2)-(player.size/2)+grid.offsetTop-tooltip.offsetHeight-10+"px";
-    tooltip.style.left=(grid.offsetWidth/2)+grid.offsetLeft-(tooltip.offsetWidth/2)+"px";
+    tooltip.style.top=(grid.offsetHeight/2)-(player.size/2)+grid.offsetTop-tooltip.offsetHeight-9+"px";
+    tooltip.style.left=(window.innerWidth/2)-(tooltip.offsetWidth/2)+"px";
     let left=Math.floor((player.x+(grid.offsetWidth/2-(player.size/2)))/blockSize);
     let right=Math.floor((player.x+player.size+(grid.offsetWidth/2-(player.size/2)))/blockSize);
     let top=Math.floor((player.y+(grid.offsetHeight/2-(player.size/2)))/blockSize);
@@ -452,7 +452,7 @@ setInterval(function(){
             state.innerHTML="Jamestown";
             if(timeline.value==1){
                 stateInfo.innerHTML="Before colonized by the British, the location of Jamestown(before being established by the British Colonists as the first permanent settement in the Americas) was inhabited by a Native American group called the Powhatans. The chief of the Powhatan tribes, Wahunsenacawh, formed the Powhatan Confederacy, which consisted of more than 30 Algonquian-speaking Native American tribes that spread out thorugh modern-day Virginia, Maryland, and North Carolina. From agriculture, trades, and battles, the Native Americans in the Powhatan Confederacy were able to sustain a healthy well-being and gain increases in their economy. Moreover, in order to expand his empire and the Powhatan Confederacy, Wahunsenacawh murdered the chiefs of other tribes and appointed his sons, or trusted relatives, in their place. Consequently, those tribes paid tribute to Wahunsenacawh in return for peace and protection. Although the Powhatan Confederacy was only formed due to the deaths of the other chiefs of other tribes, Wahunsenacawh managed to maintain peace among the tribes and their people for a long period of time before the British colonist came.";
-                img.src="https://www.historyfiles.co.uk/images/Americas/North/Map_Powhatan_AD1600_max.jpg";
+                img.src="https://www.legendsofamerica.com/wp-content/uploads/2017/04/PowhatanVillage-280.jpg";
             } else{
                 stateInfo.innerHTML="The first group of British people came here to seek for gold and treasure, which they thought were free of taking. Since they came here in search of more power(more land in the Americas than back in Europe, giving them more status), they believed that the Native Americans would assist them and willingly become slaves for them. This did not go as planned, however, as they could not find any gold to bring home. Since all of them were unexperienced farmers with little agricultural knowledge, they soon died to disease. The remaining ones went back to England after a short while after their relationships with the Powhatans grew poor as they kept the habit of stealing provision.<br><br>";
                 stateInfo.innerHTML+="Another group of British colonist came after the first ones left with the intention of cultivating tobacco at a large scale, which requires more land and more laborers. This drove them to use the lands that belonged to the Native Powhatan tribes without any compensation or reward. By doing so, the hostility and tension between the Powhatans and the British Colonists increased at a rapid rate. Although the Powhatans viewed the British as valuable allies that would help them fight against Spanish raids and conflicts at first, this continual build up of tension finally broke out into what was known as the Anglo-Powhatan War(1610-1646 CE). This war is separated into three wars, but each one of them was won by the British colonists.<br><br>";
@@ -494,7 +494,7 @@ setInterval(function(){
             } else{
                 stateInfo.innerHTML="The first Europeans that settled in the regions where the Pequot tribes were located were the Dutch, who came to the Americas in 1614. By 1622, the Dutch had established a trading post there and welcomed trades with all the indigenous tribes of the region. However, the Pequot, who were even more powerful during this time, prohibited others to trade with the Dutch. This caused some conflicts between the Dutch and the Pequot tribe, but ultimately, both came to an agreement and exchanged goods and services peacefully.<br><br>However, the Dutch weren't the only European colonists there. In 1620 CE, a group of British people known as the \"pilgrims\" crossed the Atlantic Ocean on the Mayflower and settled on the coast of Massachusetts. Their settlement established the Plymouth Colony, which flourished in 1622. The success of the Plymouth Colony encouraged even more immigrants to come, establishing more colonies. The English colony then expanded larger and further than before, constructing trading posts near the pre-existing Dutch trading post. The creation of these British trading posts attracted some Peqout to trade with them for a better price. This caused a strain on the Pequot alliance since some are trading with the Dutch, and some are trading with the British. Eventually, some parts of the Pequot tribe had aligned themselves with the English who, they felt, treated them with greater respect and were fairer in trade than the Dutch, causing trade power to shift from the Dutch to the British. As both the British and the Dutch became more powerful, they established colonies called \"New England\" and \"New Netherlands\".<br><br>As tension grew between the British and the Dutch, several British men was killed by the Native people in 1634 because they had mistaken the foreigners as Dutch. Although the casualty was small, the British thought that they could use this as an excuse to drive the Pequot out of their lands to gain more control of the trades. Therefore, the British sent soldiers to attack the Native people, which began what was known as the <strong>Pequot War(1636-1638)</strong>. The war was actually a series of raids on colonial settlements in the fall and winter of 1636 through the spring of 1637. Since the Pequot were losing the battle to the British, they tried to enlist another Native group to be their ally: Narragansett. However, the Narragansett joined with the English and together killed over 700 people.";
                 stateInfo.innerHTML+="<br><br><strong>Repercussions of European colonization</strong><br>With the Pequot War, the English was able to expand their reach inland and remove the Dutch from the New England trade. After the Dutch were driven out of the Americas, the Treaty of Hartford was signed to helped the English unify their colonies, creating the first 13 colonies and the first 13 states of the United States. Moreover, the eventual win of the war helped the British succeed in colonizing the Americas, which is why people living in United States speak English instead of Dutch.";
-                img.src="https://static.wikia.nocookie.net/totalwar-ar/images/6/68/Pequot_War.jpg/revision/latest?cb=20180812182122";
+                img.src="https://www.uswars.net/_images/pueblo-rebellion.jpg";
             }
             break;
         default:
