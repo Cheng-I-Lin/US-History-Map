@@ -1,3 +1,9 @@
+var scaleX=(window.innerHeight/722)*100;
+const text=document.getElementsByClassName("textContainer");
+for(t of text){
+    t.style.fontSize=scaleX+"%";
+    //document.getElementById("hi").innerHTML=window.innerHeight;
+}
 var player={
     x:0,
     y:0,
