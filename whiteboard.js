@@ -1,5 +1,5 @@
 var scaleX=(window.innerHeight/722)*100;
-var scale=(window.outerHeight/824);
+var scale=(window.innerHeight/722);
 const text=document.getElementsByClassName("textContainer");
 const box=document.getElementsByClassName("checkBox");
 for(t of text){
