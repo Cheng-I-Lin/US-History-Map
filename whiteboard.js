@@ -1,7 +1,13 @@
 var scaleX=(window.innerHeight/722)*100;
+var scale=(window.outerHeight/824);
 const text=document.getElementsByClassName("textContainer");
+const box=document.getElementsByClassName("checkBox");
 for(t of text){
     t.style.fontSize=scaleX+"%";
+    //document.getElementById("hi").innerHTML=window.innerHeight;
+}for(b of box){
+    b.style.width=b.offsetWidth*scale+"px";
+    b.style.height=b.offsetHeight*scale+"px";
     //document.getElementById("hi").innerHTML=window.innerHeight;
 }
 var player={
